@@ -4,8 +4,8 @@ import java.math.BigInteger;
 
 public class CustomerBean {
 
-
-	private BigInteger UCI;
+	private BigInteger accountNumber;
+	private String UCI;
 	private String firstName;
 	private String lastName;
 	private String emailId;
@@ -16,11 +16,11 @@ public class CustomerBean {
 		super();
 	}
 
-	public CustomerBean(BigInteger UCI,  String firstName, String lastName, String emailId,
+	public CustomerBean(BigInteger accountNumber, String uCI, String firstName, String lastName, String emailId,
 			String aadharNumber, String mobileNumber) {
 		super();
-
-		this.UCI = UCI;
+		this.accountNumber = accountNumber;
+		UCI = uCI;
 		this.firstName = firstName;
 		this.lastName = lastName;
 		this.emailId = emailId;
@@ -28,14 +28,20 @@ public class CustomerBean {
 		this.mobileNumber = mobileNumber;
 	}
 
+	public BigInteger getAccountNumber() {
+		return accountNumber;
+	}
 
+	public void setAccountNumber(BigInteger accountNumber) {
+		this.accountNumber = accountNumber;
+	}
 
-	public BigInteger getUCI() {
+	public String getUCI() {
 		return UCI;
 	}
 
-	public void setUCI(BigInteger UCI) {
-		this.UCI = UCI;
+	public void setUCI(String uCI) {
+		UCI = uCI;
 	}
 
 	public String getFirstName() {
@@ -80,7 +86,7 @@ public class CustomerBean {
 
 	@Override
 	public String toString() {
-		return "CustomerBean [ UCI=" + UCI + ", firstName=" + firstName
+		return "CustomerBean [accountNumber=" + accountNumber + ", UCI=" + UCI + ", firstName=" + firstName
 				+ ", lastName=" + lastName + ", emailId=" + emailId + ", aadharNumber=" + aadharNumber
 				+ ", mobileNumber=" + mobileNumber + "]";
 	}

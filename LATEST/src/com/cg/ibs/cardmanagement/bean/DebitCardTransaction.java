@@ -7,7 +7,7 @@ import java.time.LocalDateTime;
 public class DebitCardTransaction {
 	
 	private String transactionId;
-	private BigInteger UCI;
+	private String UCI;
 	private BigInteger accountNumber;
 	private BigInteger debitCardNumber;
 	private LocalDateTime date;
@@ -22,7 +22,7 @@ public class DebitCardTransaction {
 				+ ", description=" + description + ", transactiontype=" + transactiontype + "]";
 	}
 
-	public  DebitCardTransaction(String transactionId, BigInteger UCI, BigInteger accountNumber,
+	public  DebitCardTransaction(String transactionId, String UCI, BigInteger accountNumber,
 			BigInteger debitCardNumber, LocalDateTime date, BigDecimal amount, String description, String transactiontype) {
 		
 		this.transactionId = transactionId;
@@ -41,10 +41,10 @@ public class DebitCardTransaction {
 	public void setTransactionid(String transactionId) {
 		this.transactionId = transactionId;
 	}
-	public BigInteger getUCI() {
+	public String getUCI() {
 		return UCI;
 	}
-	public void setUCI(BigInteger uCI) {
+	public void setUCI(String uCI) {
 		UCI = uCI;
 	}
 	public BigInteger getAccountNumber() {

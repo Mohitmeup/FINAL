@@ -18,7 +18,7 @@ public interface CustomerDao {
 	
 	BigInteger getAccountNumber(BigInteger debitCardNumber);
 	String getdebitCardType(BigInteger debitCardNumber);
-	String requestDebitCardUpgrade(CaseIdBean caseIdObj, BigInteger debitCardNumber);
+	void requestDebitCardUpgrade(CaseIdBean caseIdObj, BigInteger debitCardNumber);
 	List<CreditCardBean> viewAllCreditCards();
 	void requestDebitCardLost(CaseIdBean caseIdObj, BigInteger debitCardNumber);
 	void requestCreditCardLost(CaseIdBean caseIdObj, BigInteger creditCardNumber);
@@ -29,9 +29,6 @@ public interface CustomerDao {
 	int getDebitCardPin(BigInteger debitCardNumber);
 	void setNewCreditPin(BigInteger creditCardNumber, int newPin);
 	int getCreditCardPin(BigInteger creditCardNumber);
-	 BigInteger getUci();
-	 BigInteger getDebitUci(BigInteger debitCardNumber);
-	 BigInteger getCreditUci(BigInteger creditCardNumber);
 
 	String getcreditCardType(BigInteger creditCardNumber);
 	boolean verifyCreditTransactionId(String transactionId);
@@ -47,11 +44,4 @@ public interface CustomerDao {
 	String getCustomerReferenceId(CaseIdBean caseIdObj, String customerReferenceId);
 	String getDebitCardStatus(BigInteger debitCardNumber);
 	String getCreditCardStatus(BigInteger creditCardNumber);
-	BigInteger getDebitCardNumber(String transactionId);
-	BigInteger getDMUci(String transactionId);
-
-	BigInteger getDMAccountNumber(String transactionId);
-
-	BigInteger getCMUci(String transactionId);
-	BigInteger getNDCUci(BigInteger accountNumber);
 }
