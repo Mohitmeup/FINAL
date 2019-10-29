@@ -10,7 +10,7 @@ import com.cg.ibs.cardmanagement.bean.DebitCardTransaction;
 public interface BankDao {
 
 	List<CaseIdBean> viewAllQueries();
-
+String dddddddddddddd = null;
 	List<CreditCardTransaction> getCreditTrans(int days, BigInteger creditCardNumber);
 
 	List<DebitCardTransaction> getDebitTrans(int dys, BigInteger debitCardNumber);
